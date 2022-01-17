@@ -1,38 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@200;300;500&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+
 :root {
   --backgroundColorDark: #1e1e1e;
+  --textColor: rgb(233, 228, 219);
+  --linkColor: rgb(207, 73, 10);
+  --linkHoverColor: rgba(207, 73, 10, 0.7);
+  --main-font: 'Poppins', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: var(--backgroundColorDark);
+  font-family: var(--main-font);
 }
 
 body {
-  position: relative;
-  color: wheat;
+  /* display: flex;
+  position: relative; */
+  color: var(--textColor);
 }
 
 header {
   width: 100vw;
-  height: 200vh;
-  background: #111111;
+  /* background: #111111; */
+  overflow: hidden;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 
-.side-bar {
-  background: #1e1e1e;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 3rem;
-  height: 100vh;
+header > h1 {
+  color: white;
+  font-size: 3rem;
+  width: 23rem;
+  margin: 10px auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: rgba(255, 166, 0, 0.781);
+  border-radius: 0.6rem;
 }
 
-.side-bar ul {
-  list-style-type: none;
+#logo {
+  width: 25rem;
+  border-radius: 0.6rem;
 }
 
-.side-bar a{
+.content {
+  /* background: turquoise; */
+  margin: auto;
+  padding: 3rem 2rem;
+  width: 60vw;
+}
+
+.section-title {
+  background: inherit;
+}
+
+.section-list {
+  display: grid;
+  list-style: none;
+  padding-top: 4rem;
+  /* Sprawdzić działanie grid */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 40px 35px;
+  /* background: darkblue; */
+}
+
+.section-list a {
   text-decoration: none;
-font-size: 2rem;
+  font-size: 1.6rem;
+  color:var(--linkColor);
+}
+
+.section-list a:hover {
+  color: var(--linkHoverColor);
+}
+
+.section-list p {
+  font-weight: lighter;
 }
