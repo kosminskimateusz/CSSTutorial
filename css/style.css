@@ -1,3 +1,38 @@
 :root {
   --backgroundColorDark: #1e1e1e;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  color: wheat;
+}
+
+header {
+  width: 100vw;
+  height: 200vh;
+  background: #111111;
+}
+
+.side-bar {
+  background: #1e1e1e;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  height: 100vh;
+}
+
+.side-bar ul {
+  list-style-type: none;
+}
+
+.side-bar a{
+  text-decoration: none;
+font-size: 2rem;
+}
