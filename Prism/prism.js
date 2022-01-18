@@ -2421,7 +2421,7 @@ Prism.languages.js = Prism.languages.javascript;
 
 	var callbacks = [];
 	var map = {};
-	var noop = function () {};
+	var noop = function () { };
 
 	Prism.plugins.toolbar = {};
 
@@ -3139,11 +3139,11 @@ Prism.languages.js = Prism.languages.javascript;
 			return input.replace(/\s+$/, '');
 		},
 		tabsToSpaces: function (input, spaces) {
-			spaces = spaces|0 || 4;
+			spaces = spaces | 0 || 4;
 			return input.replace(/\t/g, new Array(++spaces).join(' '));
 		},
 		spacesToTabs: function (input, spaces) {
-			spaces = spaces|0 || 4;
+			spaces = spaces | 0 || 4;
 			return input.replace(RegExp(' {' + spaces + '}', 'g'), '\t');
 		},
 		removeTrailing: function (input) {
@@ -3172,7 +3172,7 @@ Prism.languages.js = Prism.languages.javascript;
 			return input.replace(/^[^\S\n\r]*(?=\S)/gm, new Array(++tabs).join('\t') + '$&');
 		},
 		breakLines: function (input, characters) {
-			characters = (characters === true) ? 80 : characters|0 || 80;
+			characters = (characters === true) ? 80 : characters | 0 || 80;
 
 			var lines = input.split('\n');
 			for (var i = 0; i < lines.length; ++i) {

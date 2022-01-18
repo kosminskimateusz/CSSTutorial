@@ -1,90 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@200;300;500&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap");
 
 :root {
-  --backgroundColorDark: #1e1e1e;
-  --textColor: rgb(233, 228, 219);
-  --linkColor: rgb(207, 73, 10);
-  --linkHoverColor: rgba(207, 73, 10, 0.7);
-  --main-font: "Poppins", sans-serif;
+   --backgroundColorDark: #1e1e1e;
+   --textColor: rgb(233, 228, 219);
+   --linkColor: rgb(207, 73, 10);
+   --linkHoverColor: rgba(207, 73, 10, 0.7);
+   --main-font: "Poppins", sans-serif;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: var(--backgroundColorDark);
-  font-family: var(--main-font);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background: var(--backgroundColorDark);
 }
 
-body {
-  /* display: flex;
-  position: relative; */
-  color: var(--textColor);
+html {
+   color: var(--textColor);
+   font-family: var(--main-font);
 }
+
+
+
+/* HEADER Section */
+
+
 
 header {
-  width: 100vw;
-  /* background: #111111; */
-  overflow: hidden;
-  text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+   width: 100v;
+   /* background: #111111; */
+   overflow: hidden;
+   text-align: center;
+   padding-top: 4rem;
+   padding-bottom: 1rem;
 }
 
-header > h1 {
-  color: white;
-  font-size: 3rem;
-  width: 23rem;
-  margin: 10px auto;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background: rgba(255, 166, 0, 0.781);
-  border-radius: 0.6rem;
+header>h1 {
+   color: white;
+   font-size: 3rem;
+   width: 27%;
+   margin: 10px auto;
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+   background: rgba(255, 166, 0, 0.781);
+   border-radius: 1rem;
+   text-shadow: -3px -3px rgba(66, 59, 29, 0.459);
 }
 
-@media (max-width: 480px) {
-  #logo {
-    width: 15rem;
-    border-radius: 0.6rem;
-  }
+#logo {
+   width: 30%;
+   border-radius: 1rem;
 }
-@media (min-width: 481px) {
-  #logo {
-    width: 25rem;
-    border-radius: 0.6rem;
-  }
-}
+
+
+/* ------- Content Section ------- */
+
+
 .content {
-  background: turquoise;
-  margin: auto;
-  padding: 3rem 2rem;
-  min-width: 60vw;
-  max-width: 80vw;
+   margin: auto;
+   padding: 0 2rem;
+   min-width: 65vw;
+   max-width: 90vh;
 }
+
+.content hr {
+   border: 0;
+   /* border-radius: 50%;
+   border-top: 3px solid rgba(255, 166, 0, 0.397); */
+   height: 3px;
+   border-radius: 50%;
+   background-image: linear-gradient(to right, rgba(255, 166, 0, 0.027), rgba(255, 166, 0, 0.397), rgba(255, 166, 0, 0.027));
+}
+
+
+
+/* ------- Course Section ------- */
+
 
 .section-title {
-  background: inherit;
+   background: inherit;
+   padding: 4rem 0;
+}
+
+.section-title h1 {
+   padding-bottom: 1rem;
 }
 
 .section-list {
-  display: grid;
-  list-style: none;
-  padding-top: 4rem;
-  /* Sprawdzić działanie grid */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 40px 35px;
-  /* background: darkblue; */
+   display: grid;
+   list-style: none;
+
+   /* Sprawdzić działanie grid */
+   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+   gap: 40px 35px;
+   /* background: darkblue; */
 }
 
+
+/* ------- Links section ------- */
+
+
 .section-list a {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: var(--linkColor);
+   text-decoration: none;
+   font-size: 1.6rem;
+   color: var(--linkColor);
 }
 
 .section-list a:hover {
-  color: var(--linkHoverColor);
+   color: var(--linkHoverColor);
 }
 
 .section-list p {
-  font-weight: lighter;
+   font-weight: lighter;
 }
+
+
+
+
+
+/* ------- 1000px ------- */
+
+/* @media only screen and (max-width: 1000px) {
+   #logo {
+      width: 30rem;
+      border-radius: 0.6rem;
+   }
+} */
+
+
+/* ------- 800px ------- */
+
+/* @media only screen and (max-width: 800px) {
+   #logo {
+      width: 10rem;
+      border-radius: 0.6rem;
+   }
+} */
