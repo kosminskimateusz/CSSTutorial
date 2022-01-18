@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@200;300;500&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@200;300;500&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap");
 
 :root {
   --backgroundColorDark: #1e1e1e;
   --textColor: rgb(233, 228, 219);
   --linkColor: rgb(207, 73, 10);
   --linkHoverColor: rgba(207, 73, 10, 0.7);
-  --main-font: 'Poppins', sans-serif;
+  --main-font: "Poppins", sans-serif;
 }
 
 * {
@@ -41,16 +41,24 @@ header > h1 {
   border-radius: 0.6rem;
 }
 
-#logo {
-  width: 25rem;
-  border-radius: 0.6rem;
+@media (max-width: 480px) {
+  #logo {
+    width: 15rem;
+    border-radius: 0.6rem;
+  }
 }
-
+@media (min-width: 481px) {
+  #logo {
+    width: 25rem;
+    border-radius: 0.6rem;
+  }
+}
 .content {
-  /* background: turquoise; */
+  background: turquoise;
   margin: auto;
   padding: 3rem 2rem;
-  width: 60vw;
+  min-width: 60vw;
+  max-width: 80vw;
 }
 
 .section-title {
@@ -70,7 +78,7 @@ header > h1 {
 .section-list a {
   text-decoration: none;
   font-size: 1.6rem;
-  color:var(--linkColor);
+  color: var(--linkColor);
 }
 
 .section-list a:hover {
