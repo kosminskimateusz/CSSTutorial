@@ -52,22 +52,22 @@ header>h1 {
    /* width: 30vw; */
    margin: 1rem 2rem;
    width: 30rem;
-   max-width: 65vw;
+   max-width: 75vw;
    border-radius: 1rem;
 }
 
 
-/* ------- Content Section ------- */
+/* ------- Main Section ------- */
 
 
-.content {
+.section {
    margin: auto;
    padding: 0 2rem;
    min-width: 65vw;
-   max-width: 90vh;
+   max-width: 90vw;
 }
 
-.content hr {
+.section hr {
    border: 0;
    /* border-radius: 50%;
    border-top: 3px solid rgba(255, 166, 0, 0.397); */
@@ -106,7 +106,7 @@ header>h1 {
 
 .section-list a {
    text-decoration: none;
-   font-size: 1.6rem;
+   font-size: 1.6em;
    color: var(--linkColor);
 }
 
@@ -120,23 +120,39 @@ header>h1 {
 
 
 
+/* ------- Page Section ------- */
+
+.page-container {
+   background-color: red;
+   min-height: 100vh;
+}
 
 
-/* ------- 1000px ------- */
 
-/* @media only screen and (max-width: 1000px) {
-   #logo {
-      width: 30rem;
-      border-radius: 0.6rem;
+/* ------- Media Queries ------- */
+
+
+/* ------- 760px ------- */
+
+@media only screen and (max-width: 760px) {
+   header>h1 {
+      font-size: 2.3rem;
    }
-} */
 
-
-/* ------- 800px ------- */
-
-/* @media only screen and (max-width: 800px) {
-   #logo {
-      width: 10rem;
-      border-radius: 0.6rem;
+   .section-title {
+      font-size: 14px;
    }
-} */
+}
+
+
+/* ------- 360px ------- */
+
+@media only screen and (max-width: 360px) {
+   header>h1 {
+      font-size: 1.8rem;
+   }
+
+   .section-title {
+      font-size: 12px;
+   }
+}
