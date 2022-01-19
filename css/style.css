@@ -4,18 +4,18 @@
    --backgroundColorDark: #1e1e1e;
    --textColor: rgb(233, 228, 219);
    --linkColor: rgb(207, 73, 10);
-   --linkHoverColor: rgba(207, 73, 10, 0.7);
+   --linkHoverColor: rgba(82, 43, 26, 0.7);
    --main-font: "Poppins", sans-serif;
 }
 
 * {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
    background: var(--backgroundColorDark);
 }
 
 html {
+   box-sizing: border-box;
    color: var(--textColor);
    font-family: var(--main-font);
 }
@@ -27,7 +27,7 @@ html {
 
 
 header {
-   width: 100v;
+   width: 100vw;
    /* background: #111111; */
    overflow: hidden;
    text-align: center;
@@ -38,7 +38,8 @@ header {
 header>h1 {
    color: white;
    font-size: 3rem;
-   width: 27%;
+   width: 27rem;
+   max-width: 60vw;
    margin: 10px auto;
    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
    background: rgba(255, 166, 0, 0.781);
@@ -47,7 +48,11 @@ header>h1 {
 }
 
 #logo {
-   width: 30%;
+   /* width: 30%; */
+   /* width: 30vw; */
+   margin: 1rem 2rem;
+   width: 30rem;
+   max-width: 65vw;
    border-radius: 1rem;
 }
 
