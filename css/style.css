@@ -6,6 +6,7 @@
    --linkColor: rgb(207, 73, 10);
    --linkHoverColor: rgba(82, 43, 26, 0.7);
    --main-font: "Poppins", sans-serif;
+   --side-bar-width: 400px;
 }
 
 * {
@@ -122,14 +123,44 @@ header>h1 {
 
 /* ------- Page Section ------- */
 
-.page-container {
-   background-color: red;
-   min-height: 100vh;
+
+.page {
+   /* width: 100vw; */
+   display: grid;
+   grid-template-columns: 1fr var(--side-bar-width);
+}
+
+.content {
+   background: orange;
+   min-height: 200vh;
+}
+
+/* ------- Side Bar Navigation ------- */
+
+
+.side-bar {
+   position: sticky;
+   top: 0;
+   right: 0;
+   background: darkcyan;
+   height: 100vh;
+   width: var(--side-bar-width);
 }
 
 
 
 /* ------- Media Queries ------- */
+
+
+
+/* ------- 1370px ------- */
+
+
+@media only screen and (max-width: 1370px) {
+   :root{
+      --side-bar-width: 340px;
+   }
+}
 
 
 /* ------- 760px ------- */
