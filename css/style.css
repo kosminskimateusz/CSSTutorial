@@ -63,8 +63,8 @@ header>h1 {
 .nav-chapters {
    margin: auto;
    padding: 0 2rem;
-   min-width: 65vw;
-   max-width: 90vw;
+   width: 65vw;
+   /* max-width: 90vw; */
 }
 
 .nav-chapters hr {
