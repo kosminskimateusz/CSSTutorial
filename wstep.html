@@ -21,9 +21,16 @@
     <main class="content">
       g
     </main>
+    <button id="side-bar-button-show" type="button" onclick="showHideSideBar('side-bar', 'side-bar-button-show')">
+      <p>
+        Show
+      </p>
+    </button>
     <nav class="side-bar">
-      <button class="side-bar-button" type="button">
-
+      <button id="side-bar-button-hide" type="button" onclick="showHideSideBar('side-bar', 'side-bar-button-show')">
+        <p>
+          Hide
+        </p>
       </button>
       <h1>Kurs CSS</h1>
       <a href="./index.html" class="side-bar-link-header">
@@ -47,10 +54,11 @@
           <a href="#" class="side-bar-link">Ważne informacje</a>
         </li>
       </ul>
-      
+
     </nav>
   </div>
 
+  <script src="./js//hideShowElements.js"></script>
 </body>
 
 </html>

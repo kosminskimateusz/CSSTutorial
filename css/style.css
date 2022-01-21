@@ -128,6 +128,7 @@ header>h1 {
    /* width: 100vw; */
    display: grid;
    grid-template-columns: 1fr var(--side-bar-width);
+   position: relative;
 }
 
 .content {
@@ -158,7 +159,7 @@ header>h1 {
 .side-bar::before,
 .side-bar::after {
    content: '';
-   left: 0;
+   left: 0.5rem;
    width: 2px;
    background-image: linear-gradient(to bottom, rgba(255, 166, 0, 0.027), rgba(255, 166, 0, 0.61), rgba(255, 166, 0, 0.027));
    border-radius: 50%;
@@ -175,20 +176,51 @@ header>h1 {
    top: 8rem;
 }
 
-/* ------- Side Bar Button ------- */
+/* ------- Side Bar Button Open ------- */
 
-.side-bar-button {
+#side-bar-button-show {
    height: 3rem;
    width: 1.2rem;
    background: red;
    position: absolute;
    top: 4.5rem;
    right: 0;
+   z-index: 1;
+   display: none;
 }
 
-.side-bar-button:hover {
+#side-bar-button-show>p {
+   writing-mode: vertical-lr;
+   text-orientation: mixed;
+   background-color: inherit;
+}
+
+#side-bar-button-show:hover {
    cursor: pointer;
 }
+
+/* ------- Side Bar Button Close ------- */
+
+#side-bar-button-hide {
+   height: 3rem;
+   width: 1.2rem;
+   background: red;
+   position: absolute;
+   top: 4.5rem;
+   left: 0;
+}
+
+#side-bar-button-hide>p {
+   writing-mode: vertical-lr;
+   text-orientation: mixed;
+   background-color: inherit;
+}
+
+#side-bar-button-hide:hover {
+   cursor: pointer;
+}
+
+
 
 /* ------- Side Bar Header ------- */
 
