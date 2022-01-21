@@ -131,7 +131,7 @@ header>h1 {
 }
 
 .content {
-   background: orange;
+   /* background: orange; */
    min-height: 200vh;
 }
 
@@ -139,41 +139,86 @@ header>h1 {
 
 
 .side-bar {
-   font-size: 12px;
    padding: 5rem 3rem;
-   position: sticky;
+   position: fixed;
    top: 0;
    right: 0;
-   background: darkcyan;
+   /* background: darkcyan; */
    height: 100vh;
    width: var(--side-bar-width);
+   overflow-y: scroll;
+   font-size: 14px;
 }
 
+/* ------- Hide Scrollbar for Side-bar (Chrome) ------- */
+.side-bar::-webkit-scrollbar {
+   width: 0 !important
+}
+
+.side-bar::before,
+.side-bar::after {
+   content: '';
+   left: 0;
+   width: 2px;
+   background-image: linear-gradient(to bottom, rgba(255, 166, 0, 0.027), rgba(255, 166, 0, 0.61), rgba(255, 166, 0, 0.027));
+   border-radius: 50%;
+   position: absolute;
+}
+
+.side-bar::before {
+   height: 4rem;
+   top: 0;
+}
+
+.side-bar::after {
+   height: calc(100vh - 8rem);
+   top: 8rem;
+}
+
+/* ------- Side Bar Button ------- */
+
+.side-bar-button {
+   height: 3rem;
+   width: 1.2rem;
+   background: red;
+   position: absolute;
+   top: 4.5rem;
+   right: 0;
+}
+
+.side-bar-button:hover {
+   cursor: pointer;
+}
+
+/* ------- Side Bar Header ------- */
+
 .side-bar h1 {
-   font-size: 1.8rem;
+   font-size: 1.6em;
    padding-bottom: 2rem;
 }
 
-
-.side-bar-link-home {
-   
-}
+/* ------- Side Bar Links ------- */
 
 .side-bar-link-header {
    color: var(--main-font);
    text-decoration: none;
-   font-size: 1.4rem;
+   font-size: 1.2em;
+   display: block;
 }
 
 .side-bar-list {
-   padding-left: 1.2rem;
-   list-style:square;
+   padding-left: 1.4em;
+   list-style: none;
+}
+
+.side-bar-list-element {
+   position: relative;
 }
 
 .side-bar-link {
    color: var(--linkColor);
    text-decoration: none;
-   font-size: 1rem;
+   font-size: 1em;
    list-style-type: none;
 }
 
@@ -182,18 +227,27 @@ header>h1 {
 }
 
 
-.side-bar-button {
-   height: 20px;
-   width: 20px;
-   background: red;
+.side-bar-link::before,
+.side-bar-link::after {
+   content: '';
    position: absolute;
-   top: 50px;
-   right: 0;
+   height: 0.55em;
+   width: 0.1em;
+   background-color: red;
 }
 
-.side-bar-button:hover {
-   cursor: pointer;
+.side-bar-link::before {
+   transform: rotate(-45deg);
+   top: 0.3em;
+   left: -0.6em;
 }
+
+.side-bar-link::after {
+   transform: rotate(-135deg);
+   bottom: 0.3em;
+   left: -0.6em;
+}
+
 
 
 
