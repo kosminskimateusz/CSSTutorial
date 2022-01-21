@@ -4,7 +4,7 @@
    --backgroundColorDark: #1e1e1e;
    --textColor: rgb(233, 228, 219);
    --linkColor: rgb(207, 73, 10);
-   --linkHoverColor: rgba(82, 43, 26, 0.7);
+   --linkHoverColor: rgba(207, 73, 10, 0.6);
    --main-font: "Poppins", sans-serif;
    --side-bar-width: 400px;
 }
@@ -13,10 +13,10 @@
    margin: 0;
    padding: 0;
    background: var(--backgroundColorDark);
+   box-sizing: border-box;
 }
 
 html {
-   box-sizing: border-box;
    color: var(--textColor);
    font-family: var(--main-font);
 }
@@ -64,8 +64,7 @@ header>h1 {
 .nav-chapters {
    margin: auto;
    padding: 0 2rem;
-   width: 65vw;
-   /* max-width: 90vw; */
+   width: 60vw;
 }
 
 .nav-chapters hr {
@@ -89,6 +88,7 @@ header>h1 {
 
 .chapter h1 {
    padding-bottom: 1rem;
+   font-size: 2rem;
 }
 
 .section-list {
@@ -139,6 +139,8 @@ header>h1 {
 
 
 .side-bar {
+   font-size: 12px;
+   padding: 5rem 3rem;
    position: sticky;
    top: 0;
    right: 0;
@@ -146,6 +148,53 @@ header>h1 {
    height: 100vh;
    width: var(--side-bar-width);
 }
+
+.side-bar h1 {
+   font-size: 1.8rem;
+   padding-bottom: 2rem;
+}
+
+
+.side-bar-link-home {
+   
+}
+
+.side-bar-link-header {
+   color: var(--main-font);
+   text-decoration: none;
+   font-size: 1.4rem;
+}
+
+.side-bar-list {
+   padding-left: 1.2rem;
+   list-style:square;
+}
+
+.side-bar-link {
+   color: var(--linkColor);
+   text-decoration: none;
+   font-size: 1rem;
+   list-style-type: none;
+}
+
+.side-bar-link:hover {
+   color: var(--linkHoverColor);
+}
+
+
+.side-bar-button {
+   height: 20px;
+   width: 20px;
+   background: red;
+   position: absolute;
+   top: 50px;
+   right: 0;
+}
+
+.side-bar-button:hover {
+   cursor: pointer;
+}
+
 
 
 
@@ -157,7 +206,7 @@ header>h1 {
 
 
 @media only screen and (max-width: 1370px) {
-   :root{
+   :root {
       --side-bar-width: 340px;
    }
 }
