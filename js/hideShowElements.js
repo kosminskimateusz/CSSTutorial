@@ -10,3 +10,13 @@ function showHideSideBar(element, button) {
     buttonOpen.style.display = 'block';
   }
 }
+
+function showHideList(element, id) {
+  const el = document.getElementsByClassName(element);
+
+  if (el[id].style.display != 'block') {
+    el[id].style.display = 'block';
+  } else {
+    el[id].style.display = 'none';
+  }
+}
