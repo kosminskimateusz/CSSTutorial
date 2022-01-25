@@ -179,14 +179,14 @@ header>h1 {
 /* ------- Side Bar Button Open ------- */
 
 #side-bar-button-show {
-   height: 3rem;
+   height: 2.5rem;
    width: 1.2rem;
    border: 0;
    border-top-left-radius: 4px;
    border-bottom-left-radius: 4px;
-   background: rgba(255, 166, 0, 0.719);
+   background: rgba(255, 166, 0, 0.623);
    position: fixed;
-   top: 4.5rem;
+   top: 5rem;
    right: 0;
    z-index: 1;
    display: none;
@@ -199,7 +199,7 @@ header>h1 {
    background: var(--backgroundColorDark);
    height: 0.1rem;
    width: 0.6rem;
-   top: 1.45rem;
+   top: 1.2rem;
    left: 0.3rem;
    border-radius: 0.1rem;
 }
@@ -239,7 +239,7 @@ header>h1 {
 #side-bar-button-hide>.hide::after,
 #side-bar-button-hide>.hide::before {
    position: absolute;
-   background: rgba(255, 166, 0, 0.719);
+   background: rgba(255, 166, 0, 0.397);
    height: 0.1rem;
    width: 0.6rem;
    top: 1.45rem;
