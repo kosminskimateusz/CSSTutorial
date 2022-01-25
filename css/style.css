@@ -88,7 +88,7 @@ header>h1 {
 
 .chapter h1 {
    padding-bottom: 1rem;
-   font-size: 2rem;
+   font-size: 2.5rem;
 }
 
 .section-list {
@@ -131,11 +131,25 @@ header>h1 {
    position: relative;
 }
 
-.content {
+.content-wrapper {
    /* background: orange; */
-   min-height: 200vh;
+   min-height: 100vh;
 }
 
+.space {
+   height: 30vh;
+}
+
+.content {
+   width: 45vw;
+   max-width: 90vw;
+   margin: auto;
+}
+
+.content>h1 {
+   font-size: 2.5rem;
+   padding-bottom: 3rem;
+}
 /* ------- Side Bar Navigation ------- */
 
 
