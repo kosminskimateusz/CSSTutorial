@@ -181,7 +181,10 @@ header>h1 {
 #side-bar-button-show {
    height: 3rem;
    width: 1.2rem;
-   background: red;
+   border: 0;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 4px;
+   background: rgba(255, 166, 0, 0.719);
    position: fixed;
    top: 4.5rem;
    right: 0;
@@ -189,11 +192,31 @@ header>h1 {
    display: none;
 }
 
-#side-bar-button-show>p {
-   writing-mode: vertical-lr;
-   text-orientation: mixed;
-   background-color: inherit;
+#side-bar-button-show>.show,
+#side-bar-button-show>.show::after,
+#side-bar-button-show>.show::before {
+   position: absolute;
+   background: var(--backgroundColorDark);
+   height: 0.1rem;
+   width: 0.6rem;
+   top: 1.45rem;
+   left: 0.3rem;
+   border-radius: 0.1rem;
 }
+
+#side-bar-button-show>.show::before {
+   content: '';
+   top: -0.25rem;
+   left: 0;
+}
+
+
+#side-bar-button-show>.show::after {
+   content: '';
+   top: 0.25rem;
+   left: 0;
+}
+
 
 #side-bar-button-show:hover {
    cursor: pointer;
@@ -204,16 +227,37 @@ header>h1 {
 #side-bar-button-hide {
    height: 3rem;
    width: 1.2rem;
-   background: red;
+   border: 0;
+   background: var(--backgroundColorDark);
    position: absolute;
    top: 4.5rem;
    left: 0;
 }
 
-#side-bar-button-hide>p {
-   writing-mode: vertical-lr;
-   text-orientation: mixed;
-   background-color: inherit;
+
+#side-bar-button-hide>.hide,
+#side-bar-button-hide>.hide::after,
+#side-bar-button-hide>.hide::before {
+   position: absolute;
+   background: rgba(255, 166, 0, 0.719);
+   height: 0.1rem;
+   width: 0.6rem;
+   top: 1.45rem;
+   left: 0.3rem;
+   border-radius: 0.1rem;
+}
+
+#side-bar-button-hide>.hide::before {
+   content: '';
+   top: -0.25rem;
+   left: 0;
+}
+
+
+#side-bar-button-hide>.hide::after {
+   content: '';
+   top: 0.25rem;
+   left: 0;
 }
 
 #side-bar-button-hide:hover {

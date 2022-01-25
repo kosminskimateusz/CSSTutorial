@@ -20,3 +20,15 @@ function showHideList(element, id) {
     el[id].style.display = 'none';
   }
 }
+
+const el = document.getElementsByClassName('side-bar-list');
+
+for (let j = 0; j < el.length; j++) {
+  let links = el[j].getElementsByTagName('a');
+
+  for (let i = 0; i < links.length; i++) {
+    if (links[i].href === window.location.href) {
+      el[j].style.display = 'block';
+    }
+  }
+}
