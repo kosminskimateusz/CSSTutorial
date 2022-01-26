@@ -150,6 +150,12 @@ header>h1 {
    font-size: 2.5rem;
    padding-bottom: 3rem;
 }
+
+.content>p {
+   padding-bottom: 1.2em;
+   text-indent: 2em;
+}
+
 /* ------- Side Bar Navigation ------- */
 
 
@@ -161,6 +167,7 @@ header>h1 {
    /* background: darkcyan; */
    height: 100vh;
    width: var(--side-bar-width);
+   max-width: 95vw;
    overflow-y: scroll;
    font-size: 14px;
 }
@@ -285,6 +292,7 @@ header>h1 {
 .side-bar h1 {
    font-size: 1.6em;
    padding-bottom: 2rem;
+   width: max-content;
 }
 
 /* ------- Side Bar Links ------- */
@@ -296,6 +304,7 @@ header>h1 {
    cursor: pointer;
    font-weight: normal;
    display: block;
+   width: max-content;
 }
 
 .side-bar-link-header::selection {
@@ -306,6 +315,7 @@ header>h1 {
    display: none;
    padding-left: 1.4em;
    list-style: none;
+   width: max-content;
 }
 
 .side-bar-list-element {
@@ -390,6 +400,10 @@ header>h1 {
 /* ------- 760px ------- */
 
 @media only screen and (max-width: 760px) {
+   :root {
+      --side-bar-width: 320px;
+   }
+
    header>h1 {
       font-size: 2.3rem;
    }
@@ -397,18 +411,47 @@ header>h1 {
    .chapter {
       font-size: 14px;
    }
+
+   .page {
+      display: block;
+   }
+
+   .content {
+      width: 85%;
+   }
+
+   .side-bar {
+      display: none;
+   }
+
+   #side-bar-button-show {
+      display: block;
+   }
 }
 
 
 /* ------- 360px ------- */
 
 @media only screen and (max-width: 360px) {
+   :root {
+      --side-bar-width: 300px;
+   }
+
    header>h1 {
       font-size: 1.8rem;
    }
 
    .chapter {
       font-size: 12px;
+   }
+
+
+   .side-bar {
+      display: none;
+   }
+
+   #side-bar-button-show {
+      display: block;
    }
 }
 
