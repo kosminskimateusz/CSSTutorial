@@ -3,7 +3,7 @@ function showHideSideBar(element, button) {
   const buttonOpen = document.getElementById(button);
 
   console.log(window.innerWidth);
-  if (window.innerWidth < 760) {
+  if (window.innerWidth < 1270) {
     if (el[0].style.display != 'block') {
       el[0].style.display = 'block';
       buttonOpen.style.display = 'none';

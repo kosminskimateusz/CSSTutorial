@@ -142,8 +142,8 @@ header>h1 {
 }
 
 .content {
-   width: 45vw;
-   max-width: 90vw;
+   width: 900px;
+   max-width: 90%;
    margin: auto;
 }
 
@@ -388,15 +388,36 @@ header>h1 {
 
 
 
-/* ------- 1370px ------- */
+/* ------- 1270px ------- */
 
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1270px) {
    :root {
       --side-bar-width: 340px;
    }
+
+   .page {
+      display: block;
+   }
+
+   .side-bar {
+      display: none;
+   }
+
+   #side-bar-button-show {
+      display: block;
+   }
+
 }
 
+
+/* ------- 1025px ------- */
+
+@media only screen and (max-width: 1025px) {
+   .page {
+      display: block;
+   }
+}
 
 /* ------- 760px ------- */
 
@@ -420,24 +441,6 @@ header>h1 {
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
       gap: 40px 20px;
    }
-
-
-
-   .page {
-      display: block;
-   }
-
-   .content {
-      width: 85%;
-   }
-
-   .side-bar {
-      display: none;
-   }
-
-   #side-bar-button-show {
-      display: block;
-   }
 }
 
 @media only screen and (max-width: 600px) {
@@ -447,7 +450,7 @@ header>h1 {
       width: max-content;
    }
 
-   
+
 }
 
 /* ------- 360px ------- */
@@ -463,15 +466,6 @@ header>h1 {
 
    .chapter {
       font-size: 12px;
-   }
-
-
-   .side-bar {
-      display: none;
-   }
-
-   #side-bar-button-show {
-      display: block;
    }
 }
 
