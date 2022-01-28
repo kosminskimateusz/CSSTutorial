@@ -1,46 +1,62 @@
-function showHideSideBar(element, button) {
-  const el = document.getElementsByClassName(element);
-  const buttonOpen = document.getElementById(button);
+const sideBar = document.querySelector("#side-bar");
+const showSideBarButton = document.querySelector("#side-bar-button-show");
+const hideSideBarButton = document.querySelector("#side-bar-button-hide");
 
-  console.log(window.innerWidth);
-  if (window.innerWidth < 1270) {
-    if (el[0].style.display != 'block') {
-      el[0].style.display = 'block';
-      buttonOpen.style.display = 'none';
-    } else {
-      el[0].style.display = 'none';
-      buttonOpen.style.display = 'block';
-    }
-  }
-  else {
-    if (el[0].style.display != 'none') {
-      el[0].style.display = 'none';
-      buttonOpen.style.display = 'block';
-    } else {
-      el[0].style.display = 'block';
-      buttonOpen.style.display = 'none';
+showSideBarButton.addEventListener('click', showSideBar);
+hideSideBarButton.addEventListener('click', hideSideBar);
+
+
+function showSideBar() {
+  sideBar.style.display = 'block';
+  showSideBarButton.style.display = 'none';
+}
+
+function hideSideBar() {
+  sideBar.style.display = 'none';
+  showSideBarButton.style.display = 'block';
+}
+
+
+
+
+
+const sideBarLinkHeaders = document.querySelectorAll(".side-bar-link-header");
+const sideBarLists = document.querySelectorAll(".side-bar-list");
+document.element
+
+for (let j = 0; j < sideBarLists.length; j++) {
+  let sideBarLinks = sideBarLists[j].querySelectorAll('.side-bar-link');
+
+  for (let i = 0; i < sideBarLinks.length; i++) {
+    if (sideBarLinks[i].href === window.location.href) {
+      sideBarLists[j].style.display = 'block';
     }
   }
 }
 
-function showHideList(element, id) {
-  const el = document.getElementsByClassName(element);
 
-  if (el[id].style.display != 'block') {
-    el[id].style.display = 'block';
-  } else {
-    el[id].style.display = 'none';
+
+
+for (let i = 0; i < sideBarLinkHeaders.length; i++) {
+  sideBarLinkHeaders[i].addEventListener('click', openCloseList);
+
+  function openCloseList() {
+    if (sideBarLists[i].style.display != 'block') {
+      sideBarLists[i].style.display = 'block';
+      sideBarLinkHeaders[i].classList.remove("blue-dot");
+    } else {
+      sideBarLists[i].style.display = 'none';
+      if (sideBarLists[i].getElementsByClassName("current").length != 0) {
+        sideBarLinkHeaders[i].classList.add("blue-dot");
+      }
+    }
   }
 }
 
-const el = document.getElementsByClassName('side-bar-list');
+let sideBarLinks = document.querySelectorAll(".side-bar-link");
 
-for (let j = 0; j < el.length; j++) {
-  let links = el[j].getElementsByTagName('a');
-
-  for (let i = 0; i < links.length; i++) {
-    if (links[i].href === window.location.href) {
-      el[j].style.display = 'block';
-    }
+for (let i = 0; i < sideBarLinks.length; i++) {
+  if (sideBarLinks[i].href === (window.location.href)) {
+    sideBarLinks[i].classList.add("current");
   }
 }

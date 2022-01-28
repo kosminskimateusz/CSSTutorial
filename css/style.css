@@ -160,7 +160,7 @@ header>h1 {
 /* ------- Side Bar Navigation ------- */
 
 
-.side-bar {
+#side-bar {
    padding: 5rem 3rem;
    position: fixed;
    top: 0;
@@ -174,12 +174,12 @@ header>h1 {
 }
 
 /* ------- Hide Scrollbar for Side-bar (Chrome) ------- */
-.side-bar::-webkit-scrollbar {
+#side-bar::-webkit-scrollbar {
    width: 0 !important
 }
 
-.side-bar::before,
-.side-bar::after {
+#side-bar::before,
+#side-bar::after {
    content: '';
    left: 0.5rem;
    width: 2px;
@@ -188,12 +188,12 @@ header>h1 {
    position: absolute;
 }
 
-.side-bar::before {
+#side-bar::before {
    height: 4rem;
    top: 0;
 }
 
-.side-bar::after {
+#side-bar::after {
    height: calc(100vh - 8rem);
    top: 8rem;
 }
@@ -290,7 +290,7 @@ header>h1 {
 
 /* ------- Side Bar Header ------- */
 
-.side-bar h1 {
+#side-bar h1 {
    font-size: 1.6em;
    padding-bottom: 2rem;
    width: max-content;
@@ -298,7 +298,8 @@ header>h1 {
 
 /* ------- Side Bar Links ------- */
 
-.side-bar-link-header {
+.side-bar-link-header,
+.side-bar-link-main {
    color: var(--main-font);
    text-decoration: none;
    font-size: 1.2em;
@@ -306,10 +307,23 @@ header>h1 {
    font-weight: normal;
    display: block;
    width: max-content;
+   position: relative;
 }
 
-.side-bar-link-header::selection {
+.side-bar-link-header::selection,
+.side-bar-link-main::selection {
    color: var(--main-font);
+}
+
+.blue-dot::before {
+   content: '';
+   background-color: rgba(0, 174, 255, 0.781);
+   width: 0.3em;
+   height: 0.3em;
+   border-radius: 50%;
+   position: absolute;
+   top: 0.6em;
+   left: -0.8em;
 }
 
 .side-bar-list {
@@ -317,6 +331,7 @@ header>h1 {
    padding-left: 1.4em;
    list-style: none;
    width: max-content;
+   position: relative;
 }
 
 .side-bar-list-element {
@@ -400,7 +415,7 @@ header>h1 {
       display: block;
    }
 
-   .side-bar {
+   #side-bar {
       display: none;
    }
 
