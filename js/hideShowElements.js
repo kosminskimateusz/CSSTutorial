@@ -17,12 +17,9 @@ function hideSideBar() {
 }
 
 
-
-
-
 const sideBarLinkHeaders = document.querySelectorAll(".side-bar-link-header");
 const sideBarLists = document.querySelectorAll(".side-bar-list");
-document.element
+
 
 for (let j = 0; j < sideBarLists.length; j++) {
   let sideBarLinks = sideBarLists[j].querySelectorAll('.side-bar-link');
@@ -35,20 +32,20 @@ for (let j = 0; j < sideBarLists.length; j++) {
 }
 
 
-
-
 for (let i = 0; i < sideBarLinkHeaders.length; i++) {
-  sideBarLinkHeaders[i].addEventListener('click', openCloseList);
+  sideBarLinkHeaders[i].addEventListener('click', function () {
+    openCloseList(i);
+  }, false);
+}
 
-  function openCloseList() {
-    if (sideBarLists[i].style.display != 'block') {
-      sideBarLists[i].style.display = 'block';
-      sideBarLinkHeaders[i].classList.remove("blue-dot");
-    } else {
-      sideBarLists[i].style.display = 'none';
-      if (sideBarLists[i].getElementsByClassName("current").length != 0) {
-        sideBarLinkHeaders[i].classList.add("blue-dot");
-      }
+function openCloseList(number) {
+  if (sideBarLists[number].style.display != 'block') {
+    sideBarLists[number].style.display = 'block';
+    sideBarLinkHeaders[number].classList.remove("blue-dot");
+  } else {
+    sideBarLists[number].style.display = 'none';
+    if (sideBarLists[number].getElementsByClassName("current").length != 0) {
+      sideBarLinkHeaders[number].classList.add("blue-dot");
     }
   }
 }
